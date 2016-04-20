@@ -69,6 +69,7 @@ namespace Neo4jClient.Serialization
                 DateTime parsed;
                 if (!DateTime.TryParse(rawValue, out parsed))
                     return null;
+                return parsed;
             }
 
             var text = string.Format("{{\"a\":\"{0}\"}}", rawValue);

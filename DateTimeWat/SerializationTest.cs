@@ -50,7 +50,7 @@ namespace DateTimeWat
         public void Setup()
         {
             var url = new Uri("http://localhost:7474/db/data");
-            _client = new Neo4jClient.GraphClient(url, "neo4j", "xxxxxx");
+            _client = new GraphClient(url, "neo4j", "xxxxx");
         }
 
 
