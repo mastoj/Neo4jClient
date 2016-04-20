@@ -69,6 +69,10 @@ namespace Neo4jClient.Serialization
                 DateTime parsed;
                 if (!DateTime.TryParse(rawValue, out parsed))
                     return null;
+                if (rawValue.EndsWith("Z"))
+                {
+                    return parsed.ToUniversalTime();
+                }
                 return parsed;
             }
 
